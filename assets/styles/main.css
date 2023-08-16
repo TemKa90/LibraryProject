@@ -1,0 +1,605 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    /* background: url("../img/bg.png"); */
+    background-color: #c0c0c0;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+label {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+input[type="text"], select {
+    border-radius: 5px;
+    height: 26px;
+}
+
+button {
+    height: 30px;
+    background: #7BD6A9;
+    margin: 5px;
+    border: 0px;
+    border-radius: 5px;
+}
+
+button:hover {
+    filter: brightness(90%);
+}
+
+/* Стили для заголовка и параграфа */
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+
+/* Стили для навигационного меню */
+header {
+    background-color: #0e866d;
+    padding: 20px;
+    width: 100%;
+    top: 0;
+
+    position: fixed;
+    z-index: 1;
+}
+
+logo {
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    border-width: 9px;
+    margin-left: -85px;
+    cursor: pointer;
+      
+    width: 170px;
+    height: 100px;
+    background: #0e866d url("../img/logo.png") center center no-repeat;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li:hover {
+  filter: brightness(75%);
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 5px;
+}
+
+.left-nav {
+    float: left;
+}
+.right-nav {
+    float: right;
+    margin-right: 2%;
+}
+
+
+
+/* Стили для секции с баннером */
+.banner {
+    background-image: url('../img/7.png');
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0;
+    height: 343px;
+
+    margin: 1.5%;
+    border-radius: 10px;
+    margin-top: 6%;
+}
+
+.banner h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+
+
+/* Стили для секции с книгами */
+.featured-books {
+    background-color: #fff;
+    /* background-color: #4ba89c; */
+    padding: 50px 0;
+    text-align: center;
+    
+    display: grid;
+    place-items: center;
+
+    margin: 1.5%;
+    border-radius: 10px;
+
+    /* box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5); */
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+    width: 90%;
+    
+    justify-self: center;
+}
+
+
+
+/* Стили для карточки книги */
+.book_card {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    border-radius: 2%;
+    padding: 5%;
+
+    display: grid;
+    place-items: center;
+}
+
+.book_card:hover {
+    filter: brightness(95%);
+}
+
+.book_card img {
+    width: 75%;
+}
+.book-info select {
+    width: 180px;
+}
+
+.edit_book_button, .issue_book_button, .delete_book_button {
+    width: 60px;
+    height: 40px;
+    background: #7BD6A9;
+    margin: 5px;
+    border: 0px;
+    border-radius: 20%;
+}
+
+.edit_book_button:hover, .issue_book_button:hover, .delete_book_button:hover {
+    filter: brightness(90%);
+}
+
+
+/* Стили подвала */
+footer {
+    background-color: #0e866d;
+    padding: 20px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-contact {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    font-weight: 400;
+    line-height: 1.5;
+
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+    font-family: Arial,Helvetica,sans-serif;
+    color: #f8f9fa;
+    box-sizing: border-box;
+    outline: none;
+ 
+
+    flex: 1; 
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    color: #CCC;
+}
+
+
+/* Стили модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.edit-book-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.info-book-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.add-book-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    height: 50%;
+    width: 30%;
+    border-radius: 15px;
+}
+
+.edit-modal-content{
+    width: 40%;
+}
+
+.info-modal-content {
+    width: 25%;
+}
+
+.add-book-modal-content {
+    height: 50%;
+    width: 30%;
+}
+
+.add-categories-modal-content {
+    height: 30%;
+    width: 30%;
+}
+
+.author_container, .genre_container, .publisher_container {
+    cursor: pointer;
+}
+
+.form-container {
+    display: block;
+    height: 90%;
+    text-align: center;
+}
+  
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+.close:hover {
+    color: #000;
+}
+
+
+
+/* Стили для журнала выдачи */
+.issue-magazine-section {
+    background-color: #fff;
+    /* background-color: #4ba89c; */
+    padding: 50px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 1.5%;
+    margin-top: 6%;
+    border-radius: 10px;
+
+    /* box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5); */
+}
+
+th {
+    color: #fff;
+}
+
+.return_status_button {
+    background: #1FBF99;
+}
+
+.book_table_cell:hover {
+    cursor: pointer;
+    color: #0e866d;
+    text-decoration: underline;
+}
+
+
+
+/* ------------------- Таблица ------------------- */
+
+.scroll-table {
+    margin-top: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 90%;
+}
+  
+.scroll-table-body {
+    height: 420px;
+    overflow-x: auto;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.scroll-table table {
+    width:100%;
+    table-layout: fixed;
+    border: none;
+}
+
+.scroll-table thead th {
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    background: #0e866d;
+    font-size: 14px;
+}
+
+th {
+    color: #fff;
+}
+  
+.scroll-table thead tr th:first-child {
+    border-radius: 8px 0 0 8px;
+}
+  
+.scroll-table thead tr th:last-child {
+    border-radius: 0 8px 8px 0;
+}
+  
+.scroll-table tbody td {
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.scroll-table tbody tr:nth-child(even){
+    background: #7BD6A9;
+}
+  
+.scroll-table tbody tr td:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.scroll-table tbody tr td:last-child {
+    border-radius: 0 8px 8px 0;
+}
+   
+  /* Стили для скролла */
+::-webkit-scrollbar {
+    width: 6px;
+} 
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+  
+/* ------------------- Таблица ------------------- */
+
+
+
+  /* .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  .round {
+    border-radius: 34px;
+  } */
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 140px;
+    height: 34px;
+    vertical-align: middle;
+  }
+
+  .theme-switch{
+    width: 60px;
+  }
+  
+  .switch input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eee;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #0e866d;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  .switch input[type="checkbox"]:checked + .slider {
+    background-color: #7BD6A9;
+  }
+  
+  .switch input[type="checkbox"]:checked + .slider:before {
+    transform: translateX(106px);
+  }
+
+  .theme-switch input[type="checkbox"]:checked + .slider:before {
+    transform: translateX(25px);
+  }
+  
+  .label-on, .label-off {
+    position: absolute;
+    transition: .4s;
+  }
+  
+  .label-on {
+    left: 8px;
+    top: 8px;
+    opacity: 0;
+  }
+  
+  .label-off {
+    right: 8px;
+    top: 8px;
+  }
+  
+  .switch input[type="checkbox"]:checked + .slider + .label-on {
+    opacity: 1;
+  }
+  
+.switch input[type="checkbox"]:checked + .slider ~ .label-off {
+    opacity: 0;
+}
+
+.round {
+    border-radius: 34px;
+}
+  
+  
+
+
+
+
+
+
+
+
+.container {
+    position: relative;
+}
+  
+.content {
+    display: none;
+    top: 100%;
+    left: 0;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+  
+.author_container.open .content, .genre_container.open .content, .publisher_container.open .content {
+    display: block;
+}
+  

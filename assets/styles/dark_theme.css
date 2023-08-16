@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    /* background: url("../img/bg.png"); */
+    background-color: #333333;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+h2, h3, p {
+    color: #AAA;
+}
+
+input, select {
+    background: #CCC;
+}
+
+nav ul li a {
+    color: #000;
+}
+
+button {
+    color: #000;
+}
+
+.featured-books {
+    background-color: #222222;
+    /* background-color: #4ba89c; */
+    padding: 50px 0;
+    text-align: center;
+    
+    display: grid;
+    place-items: center;
+
+    margin: 1.5%;
+    border-radius: 10px;
+
+    /* box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5); */
+}
+
+.book_card {
+    background: #333333;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+    border: 1px solid #555555;
+    border-radius: 2%;
+    padding: 5%;
+
+    display: grid;
+    place-items: center;
+}
+
+.book_image_container {
+    background: #f5f5f5;
+    width: 70%;
+    border-radius: 4%;
+    justify-self: center;
+    padding: 10%;
+}
+
+.modal-content {
+    background-color: #555555;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    height: 50%;
+    border-radius: 15px;
+}
+
+.issue-magazine-section {
+    background-color: #555555;
+    padding: 50px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 1.5%;
+    margin-top: 6%;
+    border-radius: 10px;
+}
+
+td {
+    color: #fff;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eee;
+    transition: .4s;
+  }
+
+.content {
+    display: none;
+    top: 100%;
+    left: 0;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.book_card:hover {
+    filter: brightness(85%);
+}
+
+.book_image_container {
+    background: #555555;
+}
+
+.edit_book_button, .issue_book_button, .delete_book_button {
+    background: #4D9F7D;
+}
+
+.edit_book_button:hover, .issue_book_button:hover, .delete_book_button:hover {
+    filter: brightness(85%);
+}
+
+.scroll-table tbody tr:nth-child(even) {
+    background: #4D9F7D;
+}
+
+.return_status_button {
+    background: #1FBF99;
+}
+
+.book_table_cell:hover {
+    color: #4D9F7D;
+}
+
+.switch input[type="checkbox"]:checked + .slider {
+    background-color: #4D9F7D;
+}
+
+.slider:before {
+    background-color: #0e866d;
+}
+
+.label-on {
+    color: #fff;
+}
+
+.label-off {
+    color: #666666;
+}
+
+.container .content {
+    background-color: #222222;
+}
